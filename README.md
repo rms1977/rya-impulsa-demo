@@ -1,5 +1,13 @@
-# RYA Impulsa — Blueprint integrado
+# RYA Impulsa — Demo Blueprint Maestro Final
 
-Demo GitHub Pages con motor ampliado de detección para ciudadanía, familias, autónomos, empresas, fiscalidad, financiación, digitalización, innovación, movilidad, energía y subvenciones.
+Candidato móvil validado para GitHub Pages.
 
-El Panel 1 detecta categorías desde el texto y activa la confirmación «¿Están todas?». El Panel 2 funciona como carrusel informativo hasta la respuesta y después continúa con verificación o refinado sin perder información.
+Incluye:
+- blueprint visual grafito/naranja;
+- cabecera con métricas oficiales;
+- actualización de fuentes antes de buscar;
+- detección de ayudas por texto;
+- franja «¿Están todas? Sí/No»;
+- Panel 2 dinámico con navegación atrás;
+- monetización con modales informativos;
+- opción destacada «Lo hacemos por ti».
