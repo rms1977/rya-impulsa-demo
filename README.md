@@ -1,7 +1,13 @@
-# RYA Impulsa — Parche Panel 2 / Planes 03
+# RYA Impulsa — Demo Blueprint Maestro Final
 
-Cambio limitado:
-- elimina cualquier bloque auxiliar situado entre Panel 2 y los planes;
-- coloca los planes inmediatamente después de Panel 2;
-- asigna a los planes el espacio vertical recuperado;
-- no modifica Panel 1, carrusel, textos, lógica, logo, planta ni estética restante.
+Candidato móvil validado para GitHub Pages.
+
+Incluye:
+- blueprint visual grafito/naranja;
+- cabecera con métricas oficiales;
+- actualización de fuentes antes de buscar;
+- detección de ayudas por texto;
+- franja «¿Están todas? Sí/No»;
+- Panel 2 dinámico con navegación atrás;
+- monetización con modales informativos;
+- opción destacada «Lo hacemos por ti».
