@@ -58,9 +58,43 @@ textarea{height:92px;font-size:13px;border-radius:17px;padding:14px}
 .plans{min-height:146px;padding:10px}.plans-grid{grid-template-columns:repeat(3,1fr);gap:7px}.plan{height:68px}.plan h3{font-size:9px;margin-bottom:4px}.price{font-size:10px}.plan.featured:before{font-size:7px;top:-8px}
 @media (max-width:390px){.header{grid-template-columns:40% 60%}.brand h1{font-size:27px}.brand p{font-size:12px}.hero{grid-template-columns:minmax(0,1fr) 34%}.hero h2{font-size:36px}.plant{width:124px;height:116px}.refresh{max-width:154px;font-size:7.8px}.title{font-size:14px}}
 
-</style></head><body><main class="app">
+
+/* PATCH P0: integración real de logo y planta en la escena, sin alterar estructura ni lógica */
+.logo-zone{isolation:isolate;background:radial-gradient(ellipse 86% 76% at 45% 55%,rgba(255,177,101,.085),rgba(172,91,38,.035) 45%,transparent 76%)}
+.logo-zone:after{content:"";position:absolute;inset:3px -10px;z-index:0;pointer-events:none;background:radial-gradient(ellipse 72% 64% at 48% 58%,rgba(255,197,132,.07),transparent 72%);filter:blur(10px)}
+.logo{z-index:2;filter:drop-shadow(0 0 2px rgba(255,255,255,.18)) drop-shadow(0 6px 12px rgba(255,181,103,.18)) drop-shadow(0 16px 20px rgba(118,56,22,.16));}
+.logo-zone:before{z-index:1;opacity:.72;filter:blur(10px)}
+.hero{position:relative;isolation:isolate}
+.hero:after{content:"";position:absolute;right:-9px;top:5%;width:47%;height:92%;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 64% 58%,rgba(255,171,87,.07),rgba(115,61,26,.025) 42%,transparent 74%);filter:blur(9px)}
+.plant{object-fit:contain;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;mix-blend-mode:screen;filter:drop-shadow(0 0 4px rgba(106,217,82,.22)) drop-shadow(0 4px 9px rgba(255,153,62,.20));}
+
+</style>
+<style id="integration-remaster-05">
+/* Integración definitiva de activos: geometría intacta, sin cajas visibles ni efecto pegatina. */
+.header{overflow:visible;background:
+ radial-gradient(ellipse 38% 88% at 13% 53%,rgba(237,146,69,.10),transparent 72%),
+ radial-gradient(ellipse 54% 82% at 72% 48%,rgba(255,198,132,.035),transparent 74%),
+ linear-gradient(145deg,rgba(20,23,29,.96),rgba(7,9,13,.985));}
+.logo-zone{background:none!important;overflow:visible;isolation:isolate;}
+.logo-zone:after{inset:-8px -22px;background:
+ radial-gradient(ellipse 67% 72% at 44% 56%,rgba(255,198,135,.12),rgba(184,96,40,.045) 46%,transparent 76%);filter:blur(14px);}
+.logo-zone:before{left:-5px;right:-12px;bottom:10px;height:4px;opacity:.82;filter:blur(8px);}
+.logo{width:112%!important;height:164px!important;max-width:none;object-fit:contain;object-position:left center;transform:translate(-5px,-4px) scaleX(1.055);filter:
+ drop-shadow(0 0 1px rgba(255,255,255,.28))
+ drop-shadow(0 2px 4px rgba(255,228,194,.12))
+ drop-shadow(0 10px 13px rgba(234,139,64,.27))
+ drop-shadow(0 20px 28px rgba(96,43,18,.18));}
+.hero{overflow:visible;}
+.hero:after{right:-4%;top:-5%;width:55%;height:112%;background:
+ radial-gradient(ellipse at 64% 58%,rgba(255,171,87,.075),rgba(115,61,26,.025) 42%,transparent 76%);filter:blur(13px);}
+.plant{width:138px!important;height:112px!important;object-fit:contain;object-position:center;transform:translate(4px,-5px);filter:
+ drop-shadow(0 0 5px rgba(112,224,83,.18))
+ drop-shadow(0 0 13px rgba(239,138,66,.24));}
+@media(max-width:390px){.logo{height:154px!important;transform:translate(-7px,-5px) scaleX(1.06)}.plant{width:128px!important;height:105px!important;transform:translate(3px,-4px)}}
+</style>
+</head><body><main class="app">
 <header class="header glass"><div class="logo-zone"><img class="logo" src="assets/rya-logo-integrado.png" alt="RYA Solutions"></div><div class="brand"><h1>RYA <span>Impulsa</span></h1><p>Asistente personal de ayudas</p><div class="metrics"><div class="metric"><div class="big">+100</div><strong>categorías</strong></div><div class="metric"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"/></svg><strong>Fuentes oficiales</strong></div><div class="metric"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg><strong>Sin lenguaje administrativo</strong></div><div class="metric secure"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3z"/></svg><strong>100% confidencial</strong></div></div></div></header>
-<section class="hero"><div><h2>Tu situación.<span>Todo lo que puedes pedir.</span></h2><p>Describe qué te ocurre, tu situación actual o qué planes tienes. Deja que RYA se encargue del resto.</p></div><img class="plant" src="assets/planta-blueprint.png" alt="Planta RYA"></section>
+<section class="hero"><div><h2>Tu situación.<span>Todo lo que puedes pedir.</span></h2><p>Describe qué te ocurre, tu situación actual o qué planes tienes. Deja que RYA se encargue del resto.</p></div><img class="plant" src="assets/planta-integrada.png" alt="Planta RYA"></section>
 <section class="panel glass"><div class="panel-head"><div class="title"><span class="step">1</span>Cuéntanos tu situación</div><button class="refresh" onclick="refreshSources()"><svg viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5M6.5 8A7 7 0 0119 10M17.5 16A7 7 0 015 14"/></svg>Actualizar fuentes<br>antes de buscar</button></div><div class="input-row"><textarea id="situation" placeholder="Escribe aquí lo que te ocurre, tu situación actual o qué planes tienes..."></textarea><button class="go" onclick="analyze()">→</button></div><div class="detect-wrap"><div class="detect-label">Ayudas detectadas</div><div class="chips" id="chips"></div></div></section>
 <section class="sandwich glass" id="sandwich"><div class="label">Opciones detectadas según tu descripción</div><div class="row"><b>¿Están todas?</b><button class="choice no" onclick="answerNo()">No, falta alguna</button><button class="choice yes" onclick="answerYes()">Sí, son todas</button></div></section>
 <section class="panel dynamic glass"><div class="panel-head"><div class="title"><span class="step">2</span><span id="dynamicTitle">RYA explora todas tus posibilidades</span></div><button class="back hidden" id="backBtn" onclick="goBack()">← Volver</button></div><div class="dynamic-body" id="dynamicBody"></div></section>
